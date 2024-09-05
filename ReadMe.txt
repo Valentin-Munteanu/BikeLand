@@ -1,7 +1,7 @@
 BikeLand - Proiect realizat în Laravel 11
 
 BikeLand este un magazin online modern dedicat pasionaților de biciclete, trotinete și accesorii pentru aceste mijloace de transport.
-Proiectul utilizează metode avansate de CRUD, Filtre,Sortare și Add to Cart/Favorites, fiind construit cu Laravel 11.
+Proiectul utilizează metode avansate de CRUD, Filtre,Sortare,Cautare și Add to Cart/Favorites, fiind construit cu Laravel 11.
 
 Proiectul este împărțit în două părți principale:
 
