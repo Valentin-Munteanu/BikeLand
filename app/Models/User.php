@@ -3,9 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Cart;
+use App\Models\Favorites;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -17,12 +19,21 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        "login",
         'name',
+        "lastname",
         'email',
         'password',
+        "activation_code"
     ];
+    public function CartRelation(){
+        return $this->hasMany(Cart::class);
+    }
 
-    /**
+    public function FavoritesRelation(){
+        return $this->hasMany(Favorites::class);
+    }
+    /**P
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
@@ -44,4 +55,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
 }
